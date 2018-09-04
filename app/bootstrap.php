@@ -1,6 +1,12 @@
 <?php
 
-// Require and Load Libs
-require_once 'library/Core.php';
-require_once 'library/Controller.php';
-require_once 'library/Database.php';
+// Load config
+require_once 'config/config.php';
+
+
+// Auto Load Core Libs
+
+spl_autoload_register(function($className) {
+    require_once 'library/' . $className . '.php';
+
+});
