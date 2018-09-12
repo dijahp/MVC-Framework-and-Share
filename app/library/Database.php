@@ -40,5 +40,9 @@ class Database {
         $this->stmt = $this->dbh->prepare($sql);
     }
 
+    //Bind the values
+    public function bind($param, $value, $type = null){
+        
+    }
 
 }
